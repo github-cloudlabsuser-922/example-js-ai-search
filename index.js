@@ -23,7 +23,7 @@ async function main(){
   console.log(`Message: ${messages.map((m) => m.content).join("\n")}`);
 
   const events = await client.streamChatCompletions(deploymentId, messages, { 
-    maxTokens: 128,
+    maxTokens: 1024,
     azureChatExtensionOptions: {
       extensions: [
         {
